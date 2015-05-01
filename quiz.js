@@ -53,8 +53,6 @@
 // setRecipeName - once a recipe has a name, it cannot be set to the
 // empty string.
 
-// getRecipeCategory - if the recipe has no category, this should be "none"
-
 // setRecipeCategory - the only acceptable recipe categories are given
 // in the validRecipeCategory array.
 
