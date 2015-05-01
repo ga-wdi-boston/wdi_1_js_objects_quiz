@@ -14,6 +14,15 @@
 // have waiting lists, and adds herself to the waiting list for each
 // book.
 
+    /* object: library catalog,
+    attributes: book , waiting lists
+    method: process of borrowing the book from the library, process of being added to the waiting list
+
+    other object: books
+    attributes: genre, size, reading level
+    method: putting person on waiting list to read book
+    */
+
 // Question 2
 
 // You are writing a recipe database!  Write a constructor for a
@@ -22,8 +31,16 @@
 
 // Times are human-readable strings like "2 hours" "3 days" "15 minutes"
 
-// (your code here)
 
+var Recipe = function(recipeName, recipeCat, recipePrepTime, recipeTotTime) {
+  this.name = recipeName;
+  this.cat = recipeCat;
+  this.prep = recipePrepTime;
+  this.total = recipeTotTime;
+};
+
+var chickenRecipe = new Recipe ("Chicken and Rice", "dinner", "20 minutes", "1 hour");
+console.log(chickenRecipe);
 
 
 // Question 3:
@@ -39,6 +56,16 @@
 
 // 3. Iced Cold-Brew Irish Coffee, a beverage, which takes 10 minutes of
 //    preparation and 24 hours total time
+
+var grammasRecipe = new Recipe ("Chocolate Cake", "dessert", "2 hours", "12 hours");
+console.log(grammasRecipe);
+
+var fishRecipe = new Recipe ("Tuna Surprise Surprise", "casserole", "45 minutes", "45 minutes");
+console.log(fishRecipe);
+
+var cafeRecipe = new Recipe ("Iced Cold-Brew Irish Coffee", "beverage", "10 minutes", "24 hours");
+console.log(cafeRecipe);
+
 
 
 
@@ -58,3 +85,26 @@
 
 var validRecipeCategories = ['none', 'dessert', 'casserole',
     'salad', 'beverage', 'appetizer', 'main course', 'snack'];
+
+
+Recipe.prototype.getRecipeName = function() {
+  return this.name;
+}
+
+console.log(grammasRecipe.getRecipeName());
+
+console.log(fishRecipe.getRecipeName());
+
+
+console.log(cafeRecipe.getRecipeName());
+
+
+Recipe.prototype.setRecipeName = function(newRecipe) {
+  if (validRecipeCategories.indexOf(newRecipe) !== -1) {
+    this.name = newRecipe;
+  } else {
+    console.log("Not an acceptable recipe");
+  }
+}
+
+
