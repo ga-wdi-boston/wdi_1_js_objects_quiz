@@ -7,24 +7,34 @@
 // five likely attributes and three to five likely methods for that
 // object. Remember to consider implicit objects as well as
 // explicit ones.
-
 // Scenario: A user visits a library catalog to borrow a book for
 // pleasure reading.  She searches for several books, finds one that
 // she wishes to borrow immediately.  She also finds two books that
 // have waiting lists, and adds herself to the waiting list for each
 // book.
 
-// Question 2
+// Answer 1:
+// 3 Objects: Library, User, Book
+// 3-5 Book Attributes: Available, Waitlist, Unavailable,
+// 3-5 Book Methods: checkout, checkin, waitlist, visit-library
+
+// Question 2:
 
 // You are writing a recipe database!  Write a constructor for a
 // Recipe object that takes a recipe name, a recipe category, a recipe
 // preparation time, and a recipe total time.
-
 // Times are human-readable strings like "2 hours" "3 days" "15 minutes"
-
 // (your code here)
 
+// Answer 2:
 
+var Recipe = function (firstName, lastName, age) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.age = age;
+};
+
+var joe = new Person('Joe', 'Donnelly', 34);
 
 // Question 3:
 
