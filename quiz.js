@@ -25,15 +25,15 @@ Book methods: reserve, borrow, shelve
 // Recipe object that takes a recipe name, a recipe category, a recipe
 // preparation time, and a recipe total time.
 
+// Times are human-readable strings in the format "2 days, 3 hours, 15 minutes"
+
 function Recipe (recipeName, recipeCategory, recipePrepTime, recipeTotalTime) {
 
   this.name = recipeName;
   this.category = recipeCategory;
   this.prepTime = recipePrepTime;
   this.totalTime = recipeTotalTime;
-}
-
-
+};
 
 // Question 3:
 
@@ -49,7 +49,11 @@ function Recipe (recipeName, recipeCategory, recipePrepTime, recipeTotalTime) {
 // 3. Iced Cold-Brew Irish Coffee, a beverage, which takes 10 minutes of
 //    preparation and 24 hours total time
 
+var cakeRecipe = new Recipe("Grandma's Chocolate Cake", 'desserts', '2 hours', '12 hours');
 
+var tunaRecipe = new Recipe("Tuna Surprise Surprise", "casserole", "45 minutes", "45 minutes");
+
+var coffeeRecipe = new Recipe("Iced Cold-Brew Irish Coffee", "beverage", "10 minutes", "24 hours");
 
 // Question 4
 
@@ -59,13 +63,33 @@ function Recipe (recipeName, recipeCategory, recipePrepTime, recipeTotalTime) {
 
 // getRecipeName
 
+Recipe.prototype.getRecipeName = function(){
+  return this.name;
+};
+
 // setRecipeName - once a recipe has a name, it cannot be set to the
 // empty string.
 
-// getRecipeCategory - if the recipe has no category, this should be "none"
+Recipe.prototype.setRecipeName = function(newName) {
+  if (newName !== '') {
+    this.name = newName;
+  }
+  else {
+    console.log("bad recipe name");
+  }
+};
 
-// setRecipeCategory - the only acceptable recipe categories are given
+// setRecipeCategory - the only acceptable recipe categories are listed
 // in the validRecipeCategory array.
 
 var validRecipeCategories = ['none', 'dessert', 'casserole',
     'salad', 'beverage', 'appetizer', 'main course', 'snack'];
+
+Recipe.prototype.setRecipeCategory = function(newCategory){
+  if (validRecipeCategories.indexOf(newCategory) !== -1) {
+    this.category = newCategory;
+  }
+  else {
+    console.log('bad category');
+  }
+};
