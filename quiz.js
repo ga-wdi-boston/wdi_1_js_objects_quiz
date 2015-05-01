@@ -14,6 +14,10 @@
 // have waiting lists, and adds herself to the waiting list for each
 // book.
 
+// objects: library catalog, available books, wait-list books
+// attributes: books by title, books by genre, books by author, recently added books, books  alphabetically
+// methods: search for book by attribute, search by all books
+
 // Question 2
 
 // You are writing a recipe database!  Write a constructor for a
@@ -22,7 +26,12 @@
 
 // Times are human-readable strings like "2 hours" "3 days" "15 minutes"
 
-// (your code here)
+var Recipe = function(recipeName, recipeCategory, recipePrepTime, recipeTotalTime) {
+  this.name = recipeName;
+  this.category = recipeCategory;
+  this.prep = recipePrepTime;
+  this.totalTime = recipeTotalTime;
+};
 
 
 
@@ -34,13 +43,20 @@
 // 1. Grandmother's Chocolate Cake, a dessert, which takes 2 hours of
 //    preparation and 12 hours total time
 
+var grandmasRecipe = new Recipe ('Grandmothers Chocolate Cake', 'dessert', '2 hours', '12 hours');
+
+console.log(grandmasRecipe);
+
 // 2. Tuna Surprise Surprise, a casserole, which takes 45 minutes of
 //    preparation and 45 minutes total time
 
+var tunaRecipe = new Recipe ('Tuna Surprise Surprise', 'casserole', '45 minutes', '45 minutes');
+
+console.log(tuneRecipe);
 // 3. Iced Cold-Brew Irish Coffee, a beverage, which takes 10 minutes of
 //    preparation and 24 hours total time
 
-
+var icedRecipe = new Recipe ('Iced Cold-Brew Irish Coffee', 'beverage', '10 minutes', '24 hours')
 
 // Question 4
 
@@ -55,6 +71,27 @@
 
 // setRecipeCategory - the only acceptable recipe categories are given
 // in the validRecipeCategory array.
+
+Recipe.prototype.setRecipeName = function(newRecipeName) {
+  this.name = newName;
+}
+
+Recipe.prototype.getRecipeName = function() {
+  return this.name;
+}
+
+Recipe.prototype.setRecipeCategory = function(newRecipeCategory) {
+  var acceptableCategories = ['none', 'dessert', 'casserole',
+    'salad', 'beverage', 'appetizer', 'main course', 'snack'];
+
+    if (acceptableCategories !== -1) {
+      this.category = newRecipeCategory;
+    }
+
+    else {
+      console.log("This is not an acceptable category");
+    }
+};
 
 var validRecipeCategories = ['none', 'dessert', 'casserole',
     'salad', 'beverage', 'appetizer', 'main course', 'snack'];
