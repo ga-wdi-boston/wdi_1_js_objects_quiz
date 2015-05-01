@@ -14,6 +14,13 @@
 // have waiting lists, and adds herself to the waiting list for each
 // book.
 
+// Objects - library, bookcase, book
+
+// Book Object -
+
+// Methods - check in, check out, read, sort
+// Attributes - author, length, subject, width, color
+
 // Question 2
 
 // You are writing a recipe database!  Write a constructor for a
@@ -22,7 +29,12 @@
 
 // Times are human-readable strings like "2 hours" "3 days" "15 minutes"
 
-// (your code here)
+var Recipe = function(name, category, prepTime, totalTime){
+  this.name = name;
+  this.category = category;
+  this.prepTime = prepTime;
+  this.totalTime = totalTime;
+}
 
 
 
@@ -40,6 +52,9 @@
 // 3. Iced Cold-Brew Irish Coffee, a beverage, which takes 10 minutes of
 //    preparation and 24 hours total time
 
+var GrandmasCake = new Recipe("GrandmothersChocolateCake", "dessert", 2, 12);
+var T_Sup = new Recipe("Tuna Surprise Surprise", "casserole", 0.75, 45);
+var IcedCoffee = new Recipe("Iced Cold-Brew Irish Coffee", "beverage", 0.1625, 24);
 
 
 // Question 4
@@ -58,3 +73,22 @@
 
 var validRecipeCategories = ['none', 'dessert', 'casserole',
     'salad', 'beverage', 'appetizer', 'main course', 'snack'];
+
+Recipe.prototype.getRecipeName = function(){
+  return this.name;
+}
+
+Recipe.prototype.setRecipeName = function(newName){
+  this.name = newName;
+  return this.name;
+}
+
+Recipe.prototype.setRecipeCategory = function(newCategory){
+  if (validRecipeCategories.indexOf(newCategory) !== -1){
+    this.category = newCategory;
+  } else {
+    console.log("improv is not a category")
+  }
+  return this.category;
+}
+
