@@ -14,6 +14,24 @@
 // have waiting lists, and adds herself to the waiting list for each
 // book.
 
+Objects:
+"Library", "user", "books","list"
+
+books:
+attribute:
+author, title, pages
+method:
+type of books, story line, interests
+
+
+
+
+
+
+
+
+
+
 // Question 2
 
 // You are writing a recipe database!  Write a constructor for a
@@ -23,6 +41,13 @@
 // Times are human-readable strings like "2 hours" "3 days" "15 minutes"
 
 // (your code here)
+var Recipe = function (name, category, prepTime,totalTime ){
+  this.name = name;
+  this.category = category;
+  this.prepTime = preptime;
+  this.totalTime = totalTime;
+
+}
 
 
 
@@ -40,7 +65,9 @@
 // 3. Iced Cold-Brew Irish Coffee, a beverage, which takes 10 minutes of
 //    preparation and 24 hours total time
 
-
+var grandMaCake = new Recipe("Grandmother's Chocolate cake", "a dessert","2hrs","45min");
+var tunaSurprise = new REcipe("Tuna surprise","a casserole", "45 min", "45 min");
+var irishCoffee = new Recipe("Iced Cold-Brew Irish Coffee", "beverage", "10 min", "24 hrs");
 
 // Question 4
 
