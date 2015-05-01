@@ -75,7 +75,7 @@ var Recipe = function (nameR, cateR, prepR, totalR) {
 
 Recipe.prototype.getRecipeName = function() {return this.name;};
 Recipe.prototype.setRecipeName = function(recipeName) { this.name = nameR;}
-Recipe.prototype.setRecipeCategory = function(categoryName) {this.category = catR;}
+Recipe.prototype.setRecipeCategory = function(categoryName) {this.category = cateR;}
 
 
 var gChocCake = new Recipe("Grandmother's Chocolate Cake", "dessert", "2 hours", "12 hours");
