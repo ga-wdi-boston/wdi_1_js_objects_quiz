@@ -14,6 +14,10 @@
 // have waiting lists, and adds herself to the waiting list for each
 // book.
 
+//Objects = user, library catalogue, book
+//atrributes of book = size, color, topic
+//methods = see title of book, read summary of book, check reveiews, loan books
+
 // Question 2
 
 // You are writing a recipe database!  Write a constructor for a
@@ -22,7 +26,12 @@
 
 // Times are human-readable strings like "2 hours" "3 days" "15 minutes"
 
-// (your code here)
+var Recipe = function(name, category, prepTime, totalTime) {
+  this.name = name;
+  this.category = category;
+  this.prepTime = prepTime;
+  this.totalTime = totalTime;
+}
 
 
 
@@ -34,12 +43,17 @@
 // 1. Grandmother's Chocolate Cake, a dessert, which takes 2 hours of
 //    preparation and 12 hours total time
 
+var grandmaCake = new Recipe('Chocolate Cake', 'dessert', '2 hours', '12 hours');
+
 // 2. Tuna Surprise Surprise, a casserole, which takes 45 minutes of
 //    preparation and 45 minutes total time
+
+var tuna = new Recipe('Tuna Surprise', 'casserole', '45 minutes', '45 minutes');
 
 // 3. Iced Cold-Brew Irish Coffee, a beverage, which takes 10 minutes of
 //    preparation and 24 hours total time
 
+var irishCoffee = new Recipe('Cold-Brew Irish Coffee', 'beverage', '10 minutes', '24 hours');
 
 
 // Question 4
@@ -50,8 +64,24 @@
 
 // getRecipeName
 
+Recipe.prototype.getRecipeName = function() {
+  return this.name;
+}
+
+//I just realized what htis question was saying at the end but would add a console log to the above one.
 // setRecipeName - once a recipe has a name, it cannot be set to the
 // empty string.
+
+
+
+Recipe.prototype.setRecipeName = function(newName) {
+  if (validRecipeCategories.indexOf(newName) !== -1) {
+    this.name = newName;
+  }
+  else {
+    console.log("That recipe don't live here no more.")
+  }
+}
 
 // setRecipeCategory - the only acceptable recipe categories are given
 // in the validRecipeCategory array.
