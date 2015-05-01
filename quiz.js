@@ -14,6 +14,10 @@
 // have waiting lists, and adds herself to the waiting list for each
 // book.
 
+Objects: user, catalog, borrowing system, deadline (date) to return the book
+Attributes of catalog: author, title, genre, waitlist, number of pages, year when it was written, year when it was published
+Methods: search function, match author name, list all books from an author, display the results, add to user''s waitlist, send email when book in waitlist is available
+
 // Question 2
 
 // You are writing a recipe database!  Write a constructor for a
