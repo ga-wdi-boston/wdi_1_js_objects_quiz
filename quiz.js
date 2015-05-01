@@ -14,6 +14,17 @@
 // have waiting lists, and adds herself to the waiting list for each
 // book.
 
+
+//ANSWER!
+// Objects:
+// library, library catlog, Waiting List
+//
+//Waiting List
+//Attributes:
+//names, numbered list, dates,
+//Methods:
+//returning wait time, inputing wait time, inputing books
+
 // Question 2
 
 // You are writing a recipe database!  Write a constructor for a
@@ -21,10 +32,18 @@
 // preparation time, and a recipe total time.
 
 // Times are human-readable strings like "2 hours" "3 days" "15 minutes"
+var validRecipeCategories = ['none', 'dessert', 'casserole',
+    'salad', 'beverage', 'appetizer', 'main course', 'snack'];
+var acceptableTimes = ["15 mins", "2 hours", "3 hours"]
+var recipe = function(name, recipeCategory, recipe, prepTime, recipeTotalTime){
+  this.name = name;
+  this.recipeCategory = recipeCategory;
+  this.recipe = recipe;
+  this.prepTime = prepTime;
+  this.recipeTotalTime = recipeTotalTime;
+}
 
-// (your code here)
-
-
+var GrandmothersChocolateCake = new recipe ('Grandmothers Chocolate Cake', 'Dessert', '')
 
 // Question 3:
 
