@@ -14,10 +14,10 @@
 // have waiting lists, and adds herself to the waiting list for each
 // book.
 
-plausible objects: Book, WaitingList, User
+// plausible objects: Book, WaitingList, User
 
-Book attributes: title, location, copyright year, size, is borrowed
-Book methods: reserve, borrow, shelve
+// Book attributes: title, location, copyright year, size, is borrowed
+// Book methods: reserve, borrow, shelve
 
 // Question 2
 
@@ -25,9 +25,9 @@ Book methods: reserve, borrow, shelve
 // Recipe object that takes a recipe name, a recipe category, a recipe
 // preparation time, and a recipe total time.
 
-// Times are human-readable strings in the format "2 days, 3 hours, 15 minutes"
+// Times are human-readable strings like "2 hours" "3 days" "15 minutes"
 
-function Recipe (recipeName, recipeCategory, recipePrepTime, recipeTotalTime) {
+var Recipe = function (recipeName, recipeCategory, recipePrepTime, recipeTotalTime) {
 
   this.name = recipeName;
   this.category = recipeCategory;
@@ -49,7 +49,7 @@ function Recipe (recipeName, recipeCategory, recipePrepTime, recipeTotalTime) {
 // 3. Iced Cold-Brew Irish Coffee, a beverage, which takes 10 minutes of
 //    preparation and 24 hours total time
 
-var cakeRecipe = new Recipe("Grandma's Chocolate Cake", 'desserts', '2 hours', '12 hours');
+var cakeRecipe = new Recipe("Grandma's Chocolate Cake", "desserts", "2 hours", "12 hours");
 
 var tunaRecipe = new Recipe("Tuna Surprise Surprise", "casserole", "45 minutes", "45 minutes");
 
@@ -71,7 +71,7 @@ Recipe.prototype.getRecipeName = function(){
 // empty string.
 
 Recipe.prototype.setRecipeName = function(newName) {
-  if (newName !== '') {
+  if (newName !== "") {
     this.name = newName;
   }
   else {
@@ -82,14 +82,13 @@ Recipe.prototype.setRecipeName = function(newName) {
 // setRecipeCategory - the only acceptable recipe categories are listed
 // in the validRecipeCategory array.
 
-var validRecipeCategories = ['none', 'dessert', 'casserole',
-    'salad', 'beverage', 'appetizer', 'main course', 'snack'];
+var validRecipeCategories = ["none", "dessert", "casserole", "salad", "beverage", "appetizer", "main course", "snack"];
 
 Recipe.prototype.setRecipeCategory = function(newCategory){
   if (validRecipeCategories.indexOf(newCategory) !== -1) {
     this.category = newCategory;
   }
   else {
-    console.log('bad category');
+    console.log("bad category");
   }
 };
