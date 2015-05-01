@@ -14,6 +14,23 @@
 // have waiting lists, and adds herself to the waiting list for each
 // book.
 
+-Objects-
+
+Library
+Books
+
+
+-Attributes-
+Type of book (genre)
+Book size
+author
+
+
+-Methods-
+Searching for book
+Writing name on waiting list
+
+
 // Question 2
 
 // You are writing a recipe database!  Write a constructor for a
@@ -22,7 +39,26 @@
 
 // Times are human-readable strings like "2 hours" "3 days" "15 minutes"
 
-// (your code here)
+
+var recipes = new recipes ('recipe name', 'recipe category', 'recipe preparation');
+
+var recipe = function (recipe name , recipe category , recipe preparation {
+  this.recipe = recipe;
+  this.category = category;
+  this.preparation = preparation;
+
+  }
+
+}:
+
+recipe.prototype.setRecipe = function(newYeaR) {
+  if (newYear > 2015) {
+  console.log ("we are not yet building cars in the future");
+
+  }
+
+
+//
 
 
 
