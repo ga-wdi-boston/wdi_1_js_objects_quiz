@@ -48,17 +48,17 @@ var recipe = function (recipeName, recipeCategory, recipePrepTime, recipeTotalTi
 // 1. Grandmother's Chocolate Cake, a dessert, which takes 2 hours of
 //    preparation and 12 hours total time
 
-  grandmaChocCake = new recipe ('Grandmothers Chocolate Cake','dessert','2 hours','12 hours');
+  var grandmaChocCake = new recipe ('Grandmothers Chocolate Cake','dessert','2 hours','12 hours');
 
 // 2. Tuna Surprise Surprise, a casserole, which takes 45 minutes of
 //    preparation and 45 minutes total time
 
-  tuneSurpSurp = new recipe ('Tune Surprise Surprise','casserole','45 minutes','45 minutes');
+  var tuneSurpSurp = new recipe ('Tune Surprise Surprise','casserole','45 minutes','45 minutes');
 
 // 3. Iced Cold-Brew Irish Coffee, a beverage, which takes 10 minutes of
 //    preparation and 24 hours total time
 
-  irishCoffee = new recipe ('Iced Cold-Brew Irish Coffee','beverage','10 minutes','24 hours');
+  var irishCoffee = new recipe ('Iced Cold-Brew Irish Coffee','beverage','10 minutes','24 hours');
 
 
 // Question 4
