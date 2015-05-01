@@ -14,13 +14,24 @@
 // have waiting lists, and adds herself to the waiting list for each
 // book.
 
+plausible objects: Book, WaitingList, User
+
+Book attributes: title, location, copyright year, size, is borrowed
+Book methods: reserve, borrow, shelve
+
 // Question 2
 
 // You are writing a recipe database!  Write a constructor for a
 // Recipe object that takes a recipe name, a recipe category, a recipe
 // preparation time, and a recipe total time.
 
-// (your code here)
+function Recipe (recipeName, recipeCategory, recipePrepTime, recipeTotalTime) {
+
+  this.name = recipeName;
+  this.category = recipeCategory;
+  this.prepTime = recipePrepTime;
+  this.totalTime = recipeTotalTime;
+}
 
 
 
@@ -56,5 +67,5 @@
 // setRecipeCategory - the only acceptable recipe categories are given
 // in the validRecipeCategory array.
 
-var validRecipeCategories = ['none', 'dessert', 'casserole', 
+var validRecipeCategories = ['none', 'dessert', 'casserole',
     'salad', 'beverage', 'appetizer', 'main course', 'snack'];
