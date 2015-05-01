@@ -14,6 +14,31 @@
 // have waiting lists, and adds herself to the waiting list for each
 // book.
 
+"
+Objects:
+  user
+  library catalog
+  book
+  waiting list
+"
+
+"
+Attributes of Library Catalog
+  books in stock
+  books currently checked out
+  library users
+
+"
+
+"
+  Methods of Library catalog
+    add new book to catalog
+    add new user to catalog
+    check out book (user)
+"
+
+
+
 // Question 2
 
 // You are writing a recipe database!  Write a constructor for a
@@ -23,6 +48,13 @@
 // Times are human-readable strings like "2 hours" "3 days" "15 minutes"
 
 // (your code here)
+var Recipe = function(name, category, prepTime, totalTime){
+  this.recipeName = name;
+  this.recipeCategory = category;
+  this.preparationTime = prepTime;
+  this.totalRecipeTime = totalTime;
+}
+
 
 
 
@@ -40,7 +72,9 @@
 // 3. Iced Cold-Brew Irish Coffee, a beverage, which takes 10 minutes of
 //    preparation and 24 hours total time
 
-
+  var grandmasCake = new Recipe("Grandmother's Chocolate Cake", "dessert", "2 hours", "12 hours");
+  var tunaSupSup = new Recipe("Tuna Surprise Surprise", "casserole", "45 minutes", "45 minutes");
+  var coldBrew = new Recipe(" Iced Cold-Brew Irish Coffee", "beverage", "10 minutes", "24 hours");
 
 // Question 4
 
@@ -58,3 +92,18 @@
 
 var validRecipeCategories = ['none', 'dessert', 'casserole',
     'salad', 'beverage', 'appetizer', 'main course', 'snack'];
+
+Recipe.prototype.getRecipeName = function(name){
+  return this.recipeName;
+}
+
+Recipe.prototype.setRecipeName = function(name){
+
+  if(validRecipeCategories.indexOf(name) ){
+    this.recipeName = name;
+
+  }else {
+     console.log("invalid entry type!");
+  }
+}
+
