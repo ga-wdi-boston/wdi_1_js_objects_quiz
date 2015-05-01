@@ -14,9 +14,9 @@
 // have waiting lists, and adds herself to the waiting list for each
 // book.
 
-Objects: user, catalog, borrowing system, deadline (date) to return the book
-Attributes of catalog: author, title, genre, waitlist, number of pages, year when it was written, year when it was published
-Methods: search function, match author name, list all books from an author, display the results, add to user''s waitlist, send email when book in waitlist is available
+// "Objects: user, catalog, borrowing system, deadline (date) to return the book
+// Attributes of catalog: author, title, genre, waitlist, number of pages, year when it was written, year when it was published
+// Methods: search function, match author name, list all books from an author, display the results, add to users waitlist, send email when book in waitlist is available";
 
 // Question 2
 
@@ -27,7 +27,17 @@ Methods: search function, match author name, list all books from an author, disp
 // Times are human-readable strings like "2 hours" "3 days" "15 minutes"
 
 // (your code here)
+var Recipe = function(name, category, prepTime, totalTime) {
+  this.name = name;
+  this.category = category;
+  this.prepTime = prepTime;
+  this.totalTime = totalTime;
+}
 
+
+// TEST
+var Stew = new Recipe ('Beef Stew', 'Main Course', '45 minutes', '4 hours' );
+console.log(Stew);
 
 
 // Question 3:
@@ -44,6 +54,11 @@ Methods: search function, match author name, list all books from an author, disp
 // 3. Iced Cold-Brew Irish Coffee, a beverage, which takes 10 minutes of
 //    preparation and 24 hours total time
 
+var ChocolateCake = new Recipe ("Grandmother's Chocolate Cake", 'dessert ', '2 hours', '12 hours' );
+
+var TunaSurprise = new Recipe ('Tuna Surprise Surprise', 'casserole', '45 minutes', '45 minutes' );
+
+var IrishCoffee = new Recipe ('Iced Cold-Brew Irish Coffee', 'beverage', '10 minutes', '24 hours' );
 
 
 // Question 4
@@ -59,6 +74,14 @@ Methods: search function, match author name, list all books from an author, disp
 
 // setRecipeCategory - the only acceptable recipe categories are given
 // in the validRecipeCategory array.
+Recipe.prototype.getRecipeName = function() {
+  return this.name;
+};
+
+Recipe.prototype.setRecipeName = function() {
+// GIVE US MORE TIME PLEASE!!!!!!!!!!!!!!!!!
+}
+
 
 var validRecipeCategories = ['none', 'dessert', 'casserole',
     'salad', 'beverage', 'appetizer', 'main course', 'snack'];
