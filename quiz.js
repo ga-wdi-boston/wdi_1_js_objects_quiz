@@ -20,6 +20,8 @@
 // Recipe object that takes a recipe name, a recipe category, a recipe
 // preparation time, and a recipe total time.
 
+// Times are human-readable strings in the format "2 days, 3 hours, 15 minutes"
+
 // (your code here)
 
 
@@ -56,5 +58,5 @@
 // setRecipeCategory - the only acceptable recipe categories are given
 // in the validRecipeCategory array.
 
-var validRecipeCategories = ['none', 'dessert', 'casserole', 
+var validRecipeCategories = ['none', 'dessert', 'casserole',
     'salad', 'beverage', 'appetizer', 'main course', 'snack'];
