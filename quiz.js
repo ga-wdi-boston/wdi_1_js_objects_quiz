@@ -20,7 +20,7 @@
 // Recipe object that takes a recipe name, a recipe category, a recipe
 // preparation time, and a recipe total time.
 
-// Times are human-readable strings in the format "2 days, 3 hours, 15 minutes"
+// Times are human-readable strings like "2 hours" "3 days" "15 minutes"
 
 // (your code here)
 
